@@ -2,9 +2,16 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var multer = require('multer');
+// var upload = multer({dest: './uploads'});
 
 var app = module.exports = loopback();
-
+app.use(multer().any());
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 app.start = function() {
   // start the web server
   return app.listen(function() {

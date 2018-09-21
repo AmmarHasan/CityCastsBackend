@@ -34,5 +34,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Cast": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Citizen": {
+    "dataSource": "db",
+    "public": true
   }
 }

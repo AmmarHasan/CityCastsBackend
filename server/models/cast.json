@@ -1,0 +1,55 @@
+{
+  "name": "Cast",
+  "plural": "Casts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "createdBy": {
+      "type": "Citizen",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "images": {
+      "type": [
+        "string"
+      ]
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "upvote": {
+      "type": [
+        "Citizen"
+      ],
+      "default": []
+    },
+    "solved": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
