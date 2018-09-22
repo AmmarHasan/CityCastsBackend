@@ -2,5 +2,14 @@
   "db": {
     "name": "db",
     "connector": "memory"
-  }
+  },
+  "mymongo": {
+    "name": "mymongo",
+    "connector": "mongodb",
+    "host": "ds031903.mlab.com",
+    "port": 31903,
+    "database": "my-db-name",
+    "password": "example1",
+    "user": "root"
+   }
 }

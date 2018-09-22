@@ -14,33 +14,33 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mymongo"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mymongo",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mymongo",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mymongo",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mymongo",
     "public": false
   },
   "Cast": {
-    "dataSource": "db",
+    "dataSource": "mymongo",
     "public": true
   },
   "Citizen": {
-    "dataSource": "db",
+    "dataSource": "mymongo",
     "public": true
   }
 }
