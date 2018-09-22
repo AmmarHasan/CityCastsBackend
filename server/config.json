@@ -20,5 +20,5 @@
     "cors": false
   },
   "REGION": "us-east-1",
-  "Bucket": "saed-files"
+  "Bucket": "citycastsbucket01"
 }
