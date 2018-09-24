@@ -38,7 +38,7 @@ var AutoScalingGroup = {
   LoadBalancerNames: [
     'loadBalancerSdk',
   ],
-  MaxSize: 3,
+  MaxSize: 5,
   MinSize: 1,
 };
 
@@ -46,7 +46,7 @@ var scaleOut = {
   AdjustmentType: 'ChangeInCapacity',
   AutoScalingGroupName: 'autoScalingSDK',
   PolicyName: 'ScaleOut',
-  ScalingAdjustment: 1,
+  ScalingAdjustment: 2,
   Cooldown: 30,
 };
 
@@ -54,7 +54,7 @@ var scaleIn = {
   AdjustmentType: 'ChangeInCapacity',
   AutoScalingGroupName: 'autoScalingSDK',
   PolicyName: 'ScaleIn',
-  ScalingAdjustment: -1,
+  ScalingAdjustment: -2,
   Cooldown: 30,
 };
 
@@ -116,7 +116,7 @@ function scaleInPolicyCallBack(err, data) {
       EvaluationPeriods: 1, /* required */
       MetricName: 'RequestCount', /* required */
       Namespace: 'AWS/ELB', /* required */
-      Period: 60, /* required */
+      Period: 180, /* required */
       Threshold: 2.0, /* required */
       AlarmDescription: 'This will be used to scale in',
       DatapointsToAlarm: 1,
